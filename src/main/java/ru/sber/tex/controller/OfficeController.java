@@ -20,4 +20,22 @@ public class OfficeController {
 
 		return null;
 	}
+
+	@RequestMapping(value = "/transactions", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public Response transactionsByAccount(
+			@RequestParam(value = "account_number") String accountNumber
+	) {
+		return null;
+	}
+
+	@RequestMapping(value = "/transfer", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+	public Response transactionsByAccount(
+			@RequestParam(value = "from") String from,
+			@RequestParam(value = "to") String to,
+			@RequestParam(value = "amount") String amount
+	) {
+		return null;
+	}
 }
