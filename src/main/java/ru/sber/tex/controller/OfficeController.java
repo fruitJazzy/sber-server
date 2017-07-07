@@ -1,41 +1,46 @@
 package ru.sber.tex.controller;
 
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import ru.sber.tex.data.Response;
+import org.springframework.web.bind.annotation.*;
+import ru.sber.tex.entity.Request;
+import ru.sber.tex.entity.Response;
 
 /**
  * Created by fruitjazzy on 06.07.17.
  */
 @RestController
+@RequestMapping(value = "/api")
 public class OfficeController {
 
-	@RequestMapping(value = "/account", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
-			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-	public Response findAccount(
-			@RequestParam(value = "account_number") String accountNumber
-	) {
-
+	@RequestMapping(
+			value = "/account",
+			method = RequestMethod.POST,
+			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}
+	)
+	public Response accountInfo(@RequestBody Request request) {
+		
 		return null;
 	}
 
-	@RequestMapping(value = "/transactions", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
-			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-	public Response transactionsByAccount(
-			@RequestParam(value = "account_number") String accountNumber
-	) {
+	@RequestMapping(
+			value = "/transactions",
+			method = RequestMethod.POST,
+			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}
+	)
+	public Response showOperations(@RequestBody Request request) {
 		return null;
 	}
 
-	@RequestMapping(value = "/transfer", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
-			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-	public Response transactionsByAccount(
-			@RequestParam(value = "from") String from,
-			@RequestParam(value = "to") String to,
-			@RequestParam(value = "amount") String amount
-	) {
+	@RequestMapping(
+			value = "/transfer",
+			method = RequestMethod.POST,
+			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}
+	)
+	public Response transaction(@RequestBody Request request) {
+
 		return null;
 	}
 }
