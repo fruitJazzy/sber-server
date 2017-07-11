@@ -1,4 +1,4 @@
-package ru.sber.tex.persistence;
+package ru.sber.tex;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

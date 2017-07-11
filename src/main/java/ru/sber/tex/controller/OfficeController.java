@@ -62,7 +62,7 @@ public class OfficeController {
 			resp.setError(new Error("not correct number"));
 			return resp;
 		}
-//		resp.setTransactions();
+		transactionMapper.getAll();
 		return null;
 	}
 
@@ -72,7 +72,7 @@ public class OfficeController {
 			consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
 			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}
 	)
-	public Response transaction(@RequestBody Request request) {
+	public Response transaction(@RequestBody Request req) {
 
 		return null;
 	}

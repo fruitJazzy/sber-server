@@ -3,6 +3,7 @@ package ru.sber.tex.persistence;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import ru.sber.tex.BaseTest;
 import ru.sber.tex.persistence.entity.Account;
 
 import static org.junit.Assert.assertEquals;

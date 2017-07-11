@@ -3,7 +3,7 @@ package ru.sber.tex.controller;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.sber.tex.persistence.AccountMapper;
-import ru.sber.tex.persistence.BaseTest;
+import ru.sber.tex.BaseTest;
 import ru.sber.tex.persistence.entity.Account;
 import ru.sber.tex.persistence.entity.Request;
 import ru.sber.tex.persistence.entity.Response;

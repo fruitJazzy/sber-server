@@ -6,7 +6,6 @@ CREATE TABLE PUBLIC.account
     last_name VARCHAR(50) NOT NULL,
     amount DOUBLE DEFAULT 0
 );
-CREATE UNIQUE INDEX account_id_uindex ON PUBLIC.account (id);
 
 CREATE TABLE PUBLIC.transactions
 (
@@ -17,4 +16,3 @@ CREATE TABLE PUBLIC.transactions
     transaction_timestamp TIMESTAMP,
     amount DOUBLE
 );
-CREATE UNIQUE INDEX table_name_id_uindex ON PUBLIC.transactions (id);
